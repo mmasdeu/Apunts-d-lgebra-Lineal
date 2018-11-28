@@ -1,127 +1,127 @@
-\indexentry{matriu|hyperpage}{7}
-\indexentry{matriu!quadrada|hyperpage}{7}
-\indexentry{element!diagonal|hyperpage}{7}
-\indexentry{matriu!diagonal|hyperpage}{7}
-\indexentry{matriu!identitat|hyperpage}{7}
-\indexentry{vector|hyperpage}{7}
-\indexentry{matriu!triangular inferior|hyperpage}{7}
-\indexentry{matriu!triangular superior|hyperpage}{7}
-\indexentry{matriu!transposada|hyperpage}{7}
-\indexentry{matriu!sim\IeC {\`e}trica|hyperpage}{8}
-\indexentry{sistema d'equacions|hyperpage}{8}
-\indexentry{sistema d'equacions!matriu associada|hyperpage}{8}
-\indexentry{sistema d'equacions!termes independents|hyperpage}{8}
-\indexentry{sistema d'equacions!matriu ampliada|hyperpage}{8}
-\indexentry{matriu!operacions|hyperpage}{8}
-\indexentry{matriu!producte per escalar|hyperpage}{8}
-\indexentry{matriu!suma|hyperpage}{8}
-\indexentry{vector!combinaci\IeC {\'o} lineal|hyperpage}{9}
-\indexentry{vector!depend\IeC {\`e}ncia lineal|hyperpage}{9}
-\indexentry{vector!independ\IeC {\`e}ncia lineal|hyperpage}{9}
-\indexentry{matriu!producte de matrius|hyperpage}{9}
-\indexentry{sistema d'equacions|hyperpage}{10}
-\indexentry{producte escalar|hyperpage}{11}
-\indexentry{matriu!inversa|hyperpage}{11}
-\indexentry{matriu!transformacions elementals|hyperpage}{12}
-\indexentry{matriu!matrius equivalents|hyperpage}{12}
-\indexentry{relaci\IeC {\'o} equival\IeC {\`e}ncia|hyperpage}{13}
-\indexentry{matriu!matriu esglaonada|hyperpage}{13}
-\indexentry{matriu!pivot|hyperpage}{13}
-\indexentry{matriu!matriu redu{\"\i}da|hyperpage}{13}
-\indexentry{m\IeC {\`e}tode de Gauss|hyperpage}{13}
-\indexentry{m\IeC {\`e}tode de Gauss-Jordan|hyperpage}{13}
-\indexentry{matriu!inversa|hyperpage}{14}
-\indexentry{rref|hyperpage}{15}
-\indexentry{matriu!rang|hyperpage}{15}
-\indexentry{sistema d'equacions!exist\IeC {\`e}ncia de soluci\IeC {\'o}|hyperpage}{17}
-\indexentry{sistema d'equacions!par\IeC {\`a}metres lliures|hyperpage}{18}
-\indexentry{sistema d'equacions!sistema homogeni|hyperpage}{19}
-\indexentry{sistema d'equacions!sistema homogeni associat|hyperpage}{19}
-\indexentry{aplicaci\IeC {\'o} lineal|hyperpage}{21}
-\indexentry{vector!est\`andard|hyperpage}{22}
-\indexentry{homot\IeC {\`e}cia|hyperpage}{23}
-\indexentry{projecci\IeC {\'o} ortogonal|hyperpage}{23}
-\indexentry{projecci\IeC {\'o} ortogonal|hyperpage}{23}
-\indexentry{reflexi\IeC {\'o}|hyperpage}{24}
-\indexentry{rotaci\IeC {\'o}|hyperpage}{24}
-\indexentry{lliscament|hyperpage}{25}
-\indexentry{subespai vectorial|hyperpage}{26}
-\indexentry{nucli d'una aplicaci\IeC {\'o} lineal|hyperpage}{27}
-\indexentry{imatge d'una aplicaci\IeC {\'o} lineal|hyperpage}{27}
-\indexentry{sistema de generadors|hyperpage}{29}
-\indexentry{base d'un espai vectorial|hyperpage}{30}
-\indexentry{dimensi\IeC {\'o}|hyperpage}{30}
-\indexentry{dimensi\IeC {\'o}|hyperpage}{32}
-\indexentry{suma de subespais|hyperpage}{36}
-\indexentry{suma directa de subespais|hyperpage}{38}
-\indexentry{imatge d'una aplicaci\IeC {\'o}|hyperpage}{39}
-\indexentry{aplicaci\IeC {\'o}!injectiva|hyperpage}{39}
-\indexentry{aplicaci\IeC {\'o}!exhaustiva|hyperpage}{39}
-\indexentry{aplicaci\IeC {\'o}!bijectiva|hyperpage}{39}
-\indexentry{isomorfisme|hyperpage}{39}
-\indexentry{coordenades|hyperpage}{40}
-\indexentry{matriu!associada a una aplicaci\IeC {\'o} lineal|hyperpage}{40}
-\indexentry{matrius!similars|hyperpage}{42}
-\indexentry{espai vectorial|hyperpage}{44}
-\indexentry{subespai|hyperpage}{45}
-\indexentry{conjunt generador|hyperpage}{45}
-\indexentry{conjunt linealment dependent|hyperpage}{45}
-\indexentry{conjunt linealment dependent|hyperpage}{45}
-\indexentry{base d'un espai vectorial|hyperpage}{45}
-\indexentry{dimensi\IeC {\'o} finita|hyperpage}{45}
-\indexentry{dimensi\IeC {\'o} finita|hyperpage}{45}
-\indexentry{dimensi\IeC {\'o} d'un espai vectorial|hyperpage}{45}
-\indexentry{coordenades d'un vector|hyperpage}{46}
-\indexentry{aplicaci\IeC {\'o} lineal|hyperpage}{46}
-\indexentry{nucli d'una aplicaci\IeC {\'o} lineal|hyperpage}{47}
-\indexentry{imatge d'una aplicaci\IeC {\'o} lineal|hyperpage}{47}
-\indexentry{isomorfisme|hyperpage}{47}
-\indexentry{espais vectorials isom\IeC {\`o}rfics|hyperpage}{47}
-\indexentry{matriu d'una aplicaci\IeC {\'o} lineal|hyperpage}{48}
-\indexentry{matriu de canvi de base|hyperpage}{48}
-\indexentry{patr\IeC {\'o}|hyperpage}{54}
-\indexentry{signe d'un patr\IeC {\'o}|hyperpage}{55}
-\indexentry{permutaci\IeC {\'o}|hyperpage}{55}
-\indexentry{permutaci\IeC {\'o}!signe|hyperpage}{55}
-\indexentry{determinant|hyperpage}{57}
-\indexentry{matriu!diagonalitzable|hyperpage}{59}
-\indexentry{vector!propi|hyperpage}{60}
-\indexentry{propi!vector|hyperpage}{60}
-\indexentry{valor propi|hyperpage}{60}
-\indexentry{propi!valor|hyperpage}{60}
-\indexentry{polinomi caracter\IeC {\'\i }stic|hyperpage}{61}
-\indexentry{matriu!tra\IeC {\c c}a|hyperpage}{62}
-\indexentry{multiplicitat algebraica|hyperpage}{64}
-\indexentry{multiplicitat geom\IeC {\`e}trica|hyperpage}{64}
-\indexentry{Fibonacci|hyperpage}{66}
-\indexentry{ortogonals|hyperpage}{69}
-\indexentry{ortonormals|hyperpage}{69}
-\indexentry{projecci\IeC {\'o} ortogonal|hyperpage}{70}
-\indexentry{complement ortogonal|hyperpage}{70}
-\indexentry{desigualtat de Cauchy--Schwarz|hyperpage}{72}
-\indexentry{angle entre dos vectors|hyperpage}{72}
-\indexentry{Gram-Schmidt|hyperpage}{72}
-\indexentry{matriu!ortogonal|hyperpage}{74}
-\indexentry{aplicaci\IeC {\'o}!ortogonal|hyperpage}{75}
-\indexentry{matriu!ortogonal|hyperpage}{75}
-\indexentry{recta de regressi\IeC {\'o}|hyperpage}{78}
-\indexentry{m\IeC {\'\i }nims quadrats|hyperpage}{81}
-\indexentry{forma bilineal|hyperpage}{83}
-\indexentry{forma bilineal!sim\IeC {\`e}trica|hyperpage}{83}
-\indexentry{forma bilineal!degenerada|hyperpage}{83}
-\indexentry{forma bilineal!definida positiva|hyperpage}{83}
-\indexentry{aplicaci\IeC {\'o} bilineal!matriu|hyperpage}{83}
-\indexentry{matriu!aplicaci\IeC {\'o} bilineal|hyperpage}{83}
-\indexentry{producte escalar|hyperpage}{84}
-\indexentry{nombres complexos|hyperpage}{84}
-\indexentry{conjugat|hyperpage}{84}
-\indexentry{forma!herm\IeC {\'\i }tica|hyperpage}{85}
-\indexentry{valors singulars|hyperpage}{87}
-\indexentry{descomposici\IeC {\'o} en valors singulars|hyperpage}{87}
-\indexentry{forma bilineal! signatura|hyperpage}{90}
-\indexentry{forma quadr\IeC {\`a}tica|hyperpage}{91}
-\indexentry{forma quadr\IeC {\`a}tica! signatura|hyperpage}{93}
-\indexentry{part real|hyperpage}{95}
-\indexentry{part imagin\IeC {\`a}ria|hyperpage}{95}
-\indexentry{conjugat|hyperpage}{95}
-\indexentry{norma|hyperpage}{95}
+\indexentry{matriu|hyperpage}{2}
+\indexentry{matriu!quadrada|hyperpage}{2}
+\indexentry{element!diagonal|hyperpage}{3}
+\indexentry{matriu!diagonal|hyperpage}{3}
+\indexentry{matriu!identitat|hyperpage}{3}
+\indexentry{vector|hyperpage}{3}
+\indexentry{matriu!triangular inferior|hyperpage}{3}
+\indexentry{matriu!triangular superior|hyperpage}{3}
+\indexentry{matriu!transposada|hyperpage}{3}
+\indexentry{matriu!sim\IeC {\`e}trica|hyperpage}{3}
+\indexentry{sistema d'equacions|hyperpage}{3}
+\indexentry{sistema d'equacions!matriu associada|hyperpage}{3}
+\indexentry{sistema d'equacions!termes independents|hyperpage}{3}
+\indexentry{sistema d'equacions!matriu ampliada|hyperpage}{3}
+\indexentry{matriu!operacions|hyperpage}{4}
+\indexentry{matriu!producte per escalar|hyperpage}{4}
+\indexentry{matriu!suma|hyperpage}{4}
+\indexentry{vector!combinaci\IeC {\'o} lineal|hyperpage}{4}
+\indexentry{vector!depend\IeC {\`e}ncia lineal|hyperpage}{4}
+\indexentry{vector!independ\IeC {\`e}ncia lineal|hyperpage}{4}
+\indexentry{matriu!producte de matrius|hyperpage}{4}
+\indexentry{sistema d'equacions|hyperpage}{5}
+\indexentry{producte escalar|hyperpage}{6}
+\indexentry{matriu!inversa|hyperpage}{6}
+\indexentry{matriu!transformacions elementals|hyperpage}{7}
+\indexentry{matriu!matrius equivalents|hyperpage}{8}
+\indexentry{relaci\IeC {\'o} equival\IeC {\`e}ncia|hyperpage}{8}
+\indexentry{matriu!matriu esglaonada|hyperpage}{8}
+\indexentry{matriu!pivot|hyperpage}{8}
+\indexentry{matriu!matriu redu{\"\i}da|hyperpage}{8}
+\indexentry{m\IeC {\`e}tode de Gauss|hyperpage}{8}
+\indexentry{m\IeC {\`e}tode de Gauss-Jordan|hyperpage}{8}
+\indexentry{matriu!inversa|hyperpage}{10}
+\indexentry{rref|hyperpage}{11}
+\indexentry{matriu!rang|hyperpage}{11}
+\indexentry{sistema d'equacions!exist\IeC {\`e}ncia de soluci\IeC {\'o}|hyperpage}{13}
+\indexentry{sistema d'equacions!par\IeC {\`a}metres lliures|hyperpage}{14}
+\indexentry{sistema d'equacions!sistema homogeni|hyperpage}{15}
+\indexentry{sistema d'equacions!sistema homogeni associat|hyperpage}{15}
+\indexentry{aplicaci\IeC {\'o} lineal|hyperpage}{16}
+\indexentry{vector!est\`andard|hyperpage}{17}
+\indexentry{homot\IeC {\`e}cia|hyperpage}{18}
+\indexentry{projecci\IeC {\'o} ortogonal|hyperpage}{18}
+\indexentry{projecci\IeC {\'o} ortogonal|hyperpage}{18}
+\indexentry{reflexi\IeC {\'o}|hyperpage}{19}
+\indexentry{rotaci\IeC {\'o}|hyperpage}{19}
+\indexentry{lliscament|hyperpage}{20}
+\indexentry{subespai vectorial|hyperpage}{20}
+\indexentry{nucli d'una aplicaci\IeC {\'o} lineal|hyperpage}{21}
+\indexentry{imatge d'una aplicaci\IeC {\'o} lineal|hyperpage}{21}
+\indexentry{sistema de generadors|hyperpage}{24}
+\indexentry{base d'un espai vectorial|hyperpage}{25}
+\indexentry{dimensi\IeC {\'o}|hyperpage}{25}
+\indexentry{dimensi\IeC {\'o}|hyperpage}{27}
+\indexentry{suma de subespais|hyperpage}{30}
+\indexentry{suma directa de subespais|hyperpage}{33}
+\indexentry{imatge d'una aplicaci\IeC {\'o}|hyperpage}{34}
+\indexentry{aplicaci\IeC {\'o}!injectiva|hyperpage}{34}
+\indexentry{aplicaci\IeC {\'o}!exhaustiva|hyperpage}{34}
+\indexentry{aplicaci\IeC {\'o}!bijectiva|hyperpage}{34}
+\indexentry{isomorfisme|hyperpage}{34}
+\indexentry{coordenades|hyperpage}{35}
+\indexentry{matriu!associada a una aplicaci\IeC {\'o} lineal|hyperpage}{35}
+\indexentry{matrius!similars|hyperpage}{37}
+\indexentry{espai vectorial|hyperpage}{39}
+\indexentry{subespai|hyperpage}{40}
+\indexentry{conjunt generador|hyperpage}{40}
+\indexentry{conjunt linealment dependent|hyperpage}{40}
+\indexentry{conjunt linealment dependent|hyperpage}{40}
+\indexentry{base d'un espai vectorial|hyperpage}{40}
+\indexentry{dimensi\IeC {\'o} finita|hyperpage}{41}
+\indexentry{dimensi\IeC {\'o} finita|hyperpage}{41}
+\indexentry{dimensi\IeC {\'o} d'un espai vectorial|hyperpage}{41}
+\indexentry{coordenades d'un vector|hyperpage}{42}
+\indexentry{aplicaci\IeC {\'o} lineal|hyperpage}{42}
+\indexentry{nucli d'una aplicaci\IeC {\'o} lineal|hyperpage}{42}
+\indexentry{imatge d'una aplicaci\IeC {\'o} lineal|hyperpage}{42}
+\indexentry{isomorfisme|hyperpage}{42}
+\indexentry{espais vectorials isom\IeC {\`o}rfics|hyperpage}{42}
+\indexentry{matriu d'una aplicaci\IeC {\'o} lineal|hyperpage}{43}
+\indexentry{matriu de canvi de base|hyperpage}{43}
+\indexentry{patr\IeC {\'o}|hyperpage}{49}
+\indexentry{signe d'un patr\IeC {\'o}|hyperpage}{49}
+\indexentry{permutaci\IeC {\'o}|hyperpage}{49}
+\indexentry{permutaci\IeC {\'o}!signe|hyperpage}{50}
+\indexentry{determinant|hyperpage}{51}
+\indexentry{matriu!diagonalitzable|hyperpage}{53}
+\indexentry{vector!propi|hyperpage}{54}
+\indexentry{propi!vector|hyperpage}{54}
+\indexentry{valor propi|hyperpage}{54}
+\indexentry{propi!valor|hyperpage}{54}
+\indexentry{polinomi caracter\IeC {\'\i }stic|hyperpage}{55}
+\indexentry{matriu!tra\IeC {\c c}a|hyperpage}{56}
+\indexentry{multiplicitat algebraica|hyperpage}{58}
+\indexentry{multiplicitat geom\IeC {\`e}trica|hyperpage}{58}
+\indexentry{Fibonacci|hyperpage}{61}
+\indexentry{ortogonals|hyperpage}{63}
+\indexentry{ortonormals|hyperpage}{63}
+\indexentry{projecci\IeC {\'o} ortogonal|hyperpage}{64}
+\indexentry{complement ortogonal|hyperpage}{64}
+\indexentry{desigualtat de Cauchy--Schwarz|hyperpage}{65}
+\indexentry{angle entre dos vectors|hyperpage}{65}
+\indexentry{Gram-Schmidt|hyperpage}{66}
+\indexentry{matriu!ortogonal|hyperpage}{67}
+\indexentry{aplicaci\IeC {\'o}!ortogonal|hyperpage}{69}
+\indexentry{matriu!ortogonal|hyperpage}{69}
+\indexentry{recta de regressi\IeC {\'o}|hyperpage}{72}
+\indexentry{m\IeC {\'\i }nims quadrats|hyperpage}{73}
+\indexentry{forma bilineal|hyperpage}{76}
+\indexentry{forma bilineal!sim\IeC {\`e}trica|hyperpage}{76}
+\indexentry{forma bilineal!degenerada|hyperpage}{76}
+\indexentry{forma bilineal!definida positiva|hyperpage}{76}
+\indexentry{aplicaci\IeC {\'o} bilineal!matriu|hyperpage}{76}
+\indexentry{matriu!aplicaci\IeC {\'o} bilineal|hyperpage}{76}
+\indexentry{producte escalar|hyperpage}{77}
+\indexentry{nombres complexos|hyperpage}{77}
+\indexentry{conjugat|hyperpage}{78}
+\indexentry{forma!herm\IeC {\'\i }tica|hyperpage}{78}
+\indexentry{valors singulars|hyperpage}{80}
+\indexentry{descomposici\IeC {\'o} en valors singulars|hyperpage}{80}
+\indexentry{forma bilineal! signatura|hyperpage}{83}
+\indexentry{forma quadr\IeC {\`a}tica|hyperpage}{84}
+\indexentry{forma quadr\IeC {\`a}tica! signatura|hyperpage}{85}
+\indexentry{part real|hyperpage}{86}
+\indexentry{part imagin\IeC {\`a}ria|hyperpage}{86}
+\indexentry{conjugat|hyperpage}{86}
+\indexentry{norma|hyperpage}{86}
