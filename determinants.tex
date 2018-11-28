@@ -1,0 +1,111 @@
+\subsection{Determinant d'una matriu quadrada}\index{determinant}
+ Per definir el determinant necessitem una notació que utilitzarem a aquesta secció (es pot confondre amb una de les notacions utilitzades a les seccions anteriors, fixeu-vos amb la $c$ del superíndex).
+\begin{notacio}
+	Si $A\in M_{n\times n}(\K)$, notem per $A^c_{ij}\in M_{(n-1)\times(n-1)}$ la matriu que resulta d'eliminar la fila $i$ i la columna $j$ d'$A$. 
+\end{notacio}
+El determinant serà una aplicació que a cada $A\in M_{n\times n}(\K)$ li assignarà un escalar que escriurem com $\det(A)$ o bé $|A|\in \K$. El podem definir de manera recurrent com:
+\begin{enumerate}
+	\item En el cas de matrius $1\times 1$ $A=(a)$. Definim $\det(A)=a$.
+	\item Si tenim una matriu $A \in M_{n\times n}(A)$, definim el determinant com:
+	$$
+	\det(A)=\sum_{j=1}^n (-1)^{j+1} a_{1j} \det(A_{1j}) \,.
+	$$
+\end{enumerate} 
+\begin{exemple}
+	$$
+	\det\begin{pmatrix}
+	a & b \\ c & d
+	\end{pmatrix} =
+	\begin{vmatrix}
+	a & b \\ c & d
+	\end{vmatrix}=ad-bc \,.
+	$$
+\end{exemple}
+\begin{proposicio}\label{prop:defdet}
+	Si $A\in M_{n\times n}(\K)$, podem desenvolupar el determinant per qualsevol fila o columna segons les fórmules següents:
+	$$
+	\begin{array}{ll}
+	\det(A)=\sum_{j=1}^n (-1)^{i+j} a_{ij} \det(A_{ij}) & \text{(si desenvolupem per la fila $i$)},\\[3mm]
+	\det(A)=\sum_{i=1}^n (-1)^{i+j} a_{ij} \det(A_{ij}) & \text{(si desenvolupem per la columna $j$)}.
+	\end{array}
+	$$
+\end{proposicio}
+\begin{proof}
+	Per a demostrar això, mirem com són tots els sumands i els comparem. L'hem definit de manera recursiva, i cada cop que fem una iteració anem esborrant la fila i columna corresponent a aquell coeficient. Per tant, hi haurà un coeficient de la primera fila, un altre de la segona, \ldots, de tal manera que cada cop agafem una columna diferent, i per tant tindrem el sumand:
+	\begin{equation}\label{eq:sumanddet}
+	(-1)^\epsilon a_{1j_1} a_{2j_2} \cdots a_{nj_n}
+	\end{equation}
+	amb $j_k\neq j_l$ si $k\neq l$, i el signe ve determinat per la paritat de $\epsilon$. \textbf{[Albert: aquest resultat necessita permutacions, les introduïm?]}
+	
+	Aquesta expressió no depèn de per quina fila o columna desenvolupem, pel que el resultat final serà el mateix.
+\end{proof}
+
+\begin{proposicio}
+	L'aplicació determinant té les propietats següents:
+	\begin{enumerate}[\rm (a)]
+		\item Si $A$ té una fila (o columna) tot zeros, $\det(A)=0$.
+		\item $\det(\1_n)=1$.
+		\item Si $A'$ té els mateixos coeficients que la matriu $A$ excepte una fila (o columna) que és la mateixa multiplicada per $\lambda$, tenim $\det(A')=\lambda \det(A)$ (transformació elemental \textbf{T1}).
+		\item Si $A'$ és el resultat d'agafar una una de les files (respectivament columnes) d'$A$ i sumar-la a una altra fila (respectivament columna) multiplicada per $\mu \in \K$, llavors $\det(A')=\det(A)$ (transformació elemental \textbf{T2}).
+		\item Si $A'$ és el resultat d'intercanviar dues files (o columnes) d'$A$, tenim $\det(A')=-\det(A)$ (transformació elemental \textbf{T3}).
+	\end{enumerate}
+\end{proposicio}
+\begin{proof}
+	Per demostrar (a), desenvolupem per la fila (o columna) on tots els coeficients són zero, i la fórmula de la Proposició \ref{prop:defdet}.
+	
+	Per demostrar (b): fem-ho per inducció: (cas $n=1$) observem que $\det(\1_1)=1$. Suposem cert fins $n-1$, o sigui, $\det(\1_{n-1})=1$. Calculem $\det(\1_n)$  desenvolupant per la primera fila i obtenim $\det(\1_n)=\det(\1_{n-1})$, per tant, per la hipòtesi d'inducció, $\det(\1_n)=1$.
+	
+	Per demostrar (c), sigui $i$ (respectivament $j$) la fila (respectivament columna) de $A$ que s'ha multiplicat per $\lambda$ per obtenir $A'$. Desenvolupem els determinants d'$A$ i $A'$ per la fila $i$ (o columna $j$). Veiem que els coeficients $a'_{ij}=\lambda a_{ij}$, pel que el determinant d'$A'$ queda multiplicat per $\lambda$.
+	
+	Vegem ara (e): suposem que intercanviem les files $i_1$ i $i_2$. Si $i_1$ i $i_2$ tenen la mateixa paritat, $(-1)^{i_1+j}=(-1)^{i_2+j}$, però $\det(A_{i_1j}^c)=-\det(A_{i_2j}^c)$, per tant canvia el signe del determinant. Si $i_1$ i $_2$ tenen paritat diferent, $(-1)^{i_1+j}=-(-1)^{i_2+j}$ i $\det(A_{i_1j}^c)=\det(A_{i_2j}^c)$, per tant també canvia el signe del determinant. Per columnes, el raonament és igual.
+	
+	Amb el mateix raonament deduïm que si una matriu $A$ té dues files iguals, $i_1$ i $i_2$ (o columnes iguals), el determinant és zero: com que els coeficient $a_{i_1j}$ i $a_{i_2j}$ són iguals, cada sumand de l'Equació \eqref{eq:sumanddet} apareix dos cops i amb signe canviat, pel que la suma és zero. 
+	%si desenvolupem per la fila $i_1$ o $i_2$ obtenim signes diferents. Per tant, si la característica de $\K$ és diferent de $2$, $\det(A)=0$. Si la característica de $\K$ és $2$, cada sumand surt 2 cops, per tant també val $0$.
+	
+	Finalment vegem (d): si desenvolupem per la fila a la que hem afegit $\mu$ per una altra fila, obtenim el $\det(A')=\det(A)+\mu\det(B)$, on $B$ és una matriu que té dues files iguals, pel que $\det(B)=0$. 
+\end{proof}
+Això ens permet calcular el determinant de qualsevol matriu utilitzant la triangulació: comencem amb la matriu $A$ i anem fent les transformacions elementals per fila fins que tinguem la identitat (o una fila tot zeros) i apliquem (a) o (b) de la proposició anterior.
+\begin{exemple}
+	Calculem el determinant d'$A$, on:$$
+	A=\begin{pmatrix}
+	1 & 2 & 6 \\ 0 & -1 & -8 \\ 5 & 6 & 0
+	\end{pmatrix}
+	$$
+	$$
+	\begin{vmatrix}
+	1 & 2 & 6 \\ 0 & -1 & -8 \\ 5 & 6 & 0
+	\end{vmatrix}=
+	\begin{vmatrix}
+	1 & 2 & 6 \\ 0 & -1 & -8 \\ 0 & -4 & -30
+	\end{vmatrix}=
+	-\begin{vmatrix}
+	1 & 2 & 6 \\ 0 & 1 & 8 \\ 0 & -4 & -30
+	\end{vmatrix}=
+	-\begin{vmatrix}
+	1 & 0 & 6 \\ 0 & 1 & 8 \\ 0 & 0 & 2
+	\end{vmatrix}=
+	-2\begin{vmatrix}
+	1 & 0 & 6 \\ 0 & 1 & 8 \\ 0 & 0 & 1
+	\end{vmatrix}= -2 \det(\1_3)=-2\,.
+	$$
+\end{exemple}
+Vegem ara més propietats dels determinants:
+\begin{proposicio}
+	Si $A, B\in M_{n\times n}(\K)$, llavors:
+	\begin{enumerate}[\rm (a)]
+		\item $\det(A)=0$ si i només si $A$ no és invertible.
+		\item $\det(A)\neq 0$ si i només si les files (i les columnes) d'$A$ són linealment independent (diem que $\vec{v}_1$, \ldots, $\vec{v}_r$, vectors de $\K^n$ són \emph{linealment independents}\index{independència lineal} si l'única manera d'escriure $\vec{0}=\lambda_1 \vec{v}_1 + \cdots + \lambda_r\vec{v}_r$ és posant $\lambda_1=\cdots=\lambda_r=0$).
+		\item $\det(AB)=\det(A)\det(B)$.
+	\end{enumerate}
+\end{proposicio}
+\begin{proof}
+	Recordem que una matriu és invertible si i només si podem aconseguir la identitat mitjançant transformacions elementals. En aquest cas, cada transformació modifica el determinant canviant-li el signe o multiplicant per un $\lambda\neq 0$. Llavors:
+	
+	Si $A$ és invertible, $\det(A)=\lambda \det(\1_n)=\lambda \neq 0$.
+	
+	Si $A$ no és invertible, $\det(A)=\lambda \det(B)$, on $B$ és una matriu amb l'última fila tot zeros, per tant $\det(B)=0$, d'on es dedueix que $\det(A)=0$.
+	
+	El raonament de files (o columnes) linealment independents és el mateix, tenint en compte que les files (o columnes) són linealment independents si i només si la matriu $A$ és equivalent a la identitat.
+	
+	\textbf{[Albert: escriure el producte]}  
+\end{proof}

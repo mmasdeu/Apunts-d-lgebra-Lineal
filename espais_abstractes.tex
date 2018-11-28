@@ -1,0 +1,178 @@
+Aquest resultat ens permet definir la dimensió d'un $\K$-espai vectorial:
+\begin{definicio}\label{def:dimensio}
+	Si $\vec v_1, \dots, \vec v_m$, vectors d'un $\K$-espai vectorial $E$, formen una base, diem que \emph{$E$ té dimensió $m$}\index{dimensió}.
+\end{definicio}
+El Lema \ref{lem:generadors} també implica els resultats següents.
+
+
+
+\begin{observacio}
+	En realitat, el que hem vist a la demostració anterior és que si $E$ és un $\K$-espai vectorial de dimensió $m$, llavors:
+	\begin{itemize}
+		\item Qualsevol família de vectors generadors té com a mínim $m$ vectors.
+		\item Qualsevol família de vectors linealment independents té com a màxim $m$ vectors.
+		\item Tot subespai vectorial $F\subset E$ és de dimensió $n\leq m$ (si tenim $\vec v_1, \dots, \vec v_k$ vectors d'$F$ linealment independents, també seran linealment independents a $E$, per tant no en podem tenir més de $m$, i si n'anem afegint, en algun moment generaran tot $F$). A més, $n=m$ si i només si $F=E$ (si $n=m$, llavors tenim una base amb $n$ vectors d'$F$, que podem ampliar fins a base d'$E$, però no hi podem afegir vectors ja que $\dim(E)=m=n$).
+	\end{itemize}
+\end{observacio}
+
+\subsection{Nucli i imatge d'una aplicació lineal}
+Comencem adaptant la definició d'aplicació lineal de $\K^n$ a $\K^m$ vista a la Definició \ref{def:aplicaciolinealKn} al cas més general d'espais vectorials:
+\begin{definicio}\label{def:aplicaciolineal}
+	Si $E$ i $E'$ són $\K$-espais vectorials, diem que una aplicació $f\colon E \to E'$ \emph{és $\K$-lineal} \index{aplicació lineal} si satisfà
+	\begin{enumerate}
+		\item $f(\vec u+\vec v) = f(\vec u) + f(\vec v)$ per a tot $\vec u, \vec v \in E$, i
+		\item $f(\lambda \vec u) = \lambda f(\vec u)$ per a tot $\lambda\in\K$ i tot $\vec u\in E$.
+	\end{enumerate}
+\end{definicio}
+\begin{exemple}
+	Si considerem $E=\K^n$ i $E'=\K^m$, tots els exemples que s'han vist a les Seccions \ref{subsec:matriusapl} i \ref{subsec:linealgeom} són aplicacions lineals.
+\end{exemple}
+\begin{exemple}
+	Si considerem $E=E'=\R[x]$ i $f\colon \R[x] \to \R[x]$ l'aplicació que a cada polinomi li correspon el polinomi resultat de derivar respecte d'$x$ 
+	$$
+	f(a_0+a_1x+\cdots +a_nx^n)=a_1+2a_2x+3a_3x^3+\cdots +na_{n}x^{n-1}
+	$$
+	és també lineal.
+\end{exemple}
+\begin{definicio}
+	Sigui $f\colon E \to E'$ una aplicació lineal entre $\K$-espais vectorials i .
+	\begin{itemize}
+		\item Definim el \emph{nucli d'$f$}\index{nucli d'una aplicació lineal} (i el denotem com $\Ker(f)$) com els vectors $\vec v\in E$ tals que $f(\vec v)=\vec 0$.
+		\item Definim la \emph{imatge d'$f$}\index{imatge d'una aplicació lineal} (i la denotem com $\Ima(f)$) com els vectors $\vec w\in E'$ tals que existeix $\vec v\in E$ tal que $f(\vec v)=\vec w$.
+	\end{itemize}
+\end{definicio}
+\begin{proposicio}
+	Si $f \colon E \to E'$ és una aplicació lineal entre $\K$-espais vectorials, llavors:
+	\begin{itemize}
+		\item $\Ker(f)$ és un subespai vectorial de $E$.
+		\item $\Ima(f)$ és un subespai vectorial de $E'$.
+	\end{itemize}
+\end{proposicio}
+\begin{proof}
+	Comprovem primer que $\Ker(f)$ compleix les dues condicions de la Definició \ref{def:subespai}:
+	Considerem $\vec u, \vec v \in \Ker(f)$, per tant $f(\vec u)=f(\vec v)=\vec 0$. Llavors:
+	$$
+	f(\vec u+\vec v)=f(\vec u)+f(\vec v)=\vec 0+\vec 0 =\vec 0 ,
+	$$
+	per tant $\vec u+\vec v \in \Ker(f)$.
+	
+	També, si $\vec u \in \Ker(f)$ i $\lambda\in\K$, llavors $f(\lambda \vec u)=\lambda f(\vec u)=\lambda \vec 0=\vec 0$, per tant $\lambda \vec u\in\Ker(f)$.
+	
+	Comprovem ara que $\Ima(f)$ també compleix les dues condicions: si $\vec v_1,\vec v_2 \in\Ima(f)$, llavors existeixen $\vec u_1, \vec u_2 \in E$ tals que $f(\vec u_1)=\vec v_1$ i $f(\vec u_2)=\vec v_2$. Llavors es compleix que $f(\vec u_1+\vec u_2)=f(\vec u_1)+f(\vec u_2)=\vec v_1+\vec v_2$, pel que $\vec v_1+\vec v_2 \in \Ima(f)$. També, si $\vec v\in \Ima(f)$ (per tant existeix $\vec u\in E$ tal que $f(\vec u)=\vec v$) i $\lambda\in\K$, tenim que $f(\lambda \vec u)=\lambda f(\vec u)=\lambda \vec v$, pel que $\lambda \vec v \in \Ima(f)$.
+\end{proof}
+
+
+
+\subsection{Aplicacions injectives, exhaustives i bijectives}
+Recordem unes definicions de venen de considerar aplicacions entre conjunts: si $A$ i $B$ són conjunts i $f\colon A \to B$ és una aplicació entre $A$ i $B$ (això vol dir que assignem a cada element $a\in A$ un element $f(a)\in B$, i anomenem a $f(a)$ \emph{imatge de l'element $a$ per $f$}\index{imatge d'una aplicació}), diem que:
+\begin{itemize}
+	\item $f$ és \emph{injectiva}\index{aplicació!injectiva} si quan $a\neq a'$, llavors $f(a)\neq f(a')$ (envia elements diferents a elements diferents).
+	\item $f$ és \emph{exhaustiva}\index{aplicació!exhaustiva} si per a tot $b\in B$, existeix $a\in A$ tal que $f(a)=b$ (tot element té antiimatge).
+	\item $f$ és \emph{bijectiva}\index{aplicació!bijectiva} si és injectiva i exhaustiva. Equivalentment, per a tot $b\in B$ existeix un únic $a\in A$ tal que $f(a)=b$.
+	\item Anomenem $\Ima(f)\subset B$ a \emph{la imatge de l'aplicació $f$}. Per tant, $f$ és exhaustiva si i només si $\Ima(f)=B$.
+	\item Si tenim $f\colon A \to B$ i $g\colon B \to C$ aplicacions de conjunts, definim la composició $g\circ f \colon A \to C$ com l'aplicació $g\circ f(a)=g(f(a))$.
+\end{itemize}
+
+\begin{exemple}
+	\begin{itemize}
+		\item $A=\{1,2,3\}$ , $B=\{a,b,c,d\}$ i definim $f\colon A \to B$ com $f(1)=a$, $f(2)=b$ i $f(3)=a$. Aquesta aplicació no és ni injectiva ($f(1)=f(3)$ quan $1\neq 3$), ni exhaustiva ($c\not\in \Ima(f)$).
+		\item $A=\{1,2,3\}$ , $B=\{a,b,c,d\}$ i definim $g\colon A \to B$ com $g(1)=a$, $g(2)=b$ i $g(3)=d$. Aquesta aplicació és injectiva, però no exhaustiva ($c\not\in \Ima(f)$).
+		\item $A=\{1,2,3\}$ , $B=\{a,b,c,d\}$ i definim $h\colon B \to A$ com $h(a)=1$, $h(b)=2$ $h(c)=1$ i $h(d)=3$. Aquesta aplicació no és injectiva ($h(c)=h(a)$), però sí que és  exhaustiva.
+		\item Veiem que $h\circ g \colon A \to A$ és l'aplicació que envia cada element a ell mateix (l'anomenem aplicació identitat d'$A$ i la denotem per $\1_A$).
+	\end{itemize}
+\end{exemple}
+
+Les aplicacions lineals entre espais vectorials són un cas particular d'aplicacions de conjunts, per tant té sentit de parlar d'aplicacions lineals injectives, exhaustives i bijectives. Tenim una caracterització de les aplicacions lineals injectives:
+\begin{lema}
+	$f \colon E \to E'$ una aplicació lineal entre $\K$-espais vectorials. Llavors $f$ és injectiva si i només si $\ker(f)=\{\vec 0\}$.
+\end{lema}
+\begin{proof}
+	Suposem que $f$ és injectiva. Com que és lineal $f(\vec 0)=\vec 0$, per tant $\{\vec 0\} \subset \Ker(f)$. Si $\Ker(f)$ tingués algun altre vector $\vec v \neq \vec 0$, llavors $f$ no seria injectiva (tindria dos vectors amb la mateixa imatge).
+	
+	Suposem que $f$ no és injectiva: llavors existeixen $\vec u \neq \vec v$ tals que $f(\vec u)=f(\vec v)$. Però llavors $f(\vec u- \vec v)=f(\vec u)-f(\vec v)=\vec 0$, amb $\vec u-\vec v\neq \vec 0$, i tenim que $\Ker(f)\neq \{\vec 0\}$.
+\end{proof}
+
+\begin{exercici}
+	Considerem $A \in M_{m\times n}(\K)$ i l'aplicació lineal $f_A\colon \K^n\to \K^m$ definida a l'Exemple \ref{exemple:Alineal}. Demostreu que:
+	\begin{enumerate}[(a)]
+		\item $f_A$ és injectiva si i només si $\Rang(A)=n$.
+		\item $f_A$ és exhaustiva si i nomes si $\Rang(A)=m$.
+		\item $f_A$ és bijectiva si i només si $n=m$ i $A$ és invertible.
+	\end{enumerate}
+\end{exercici}
+
+
+\begin{exemple}
+	Considerem $E$ l'espai de polinomis de grau més petit o igual que $2$ amb coeficients a $\R$ amb base $\calb [1,x,x^2]$, i $E'$ l'espai de les matrius $2\times 2$ amb coeficients a $\R$ amb base 
+	$\calb'=\big[\big(\begin{smallmatrix}1&0\\0&0\end{smallmatrix}\big),\big(\begin{smallmatrix}0&1\\0&0\end{smallmatrix}\big),\big(\begin{smallmatrix}0&0\\1&0\end{smallmatrix}\big),\big(\begin{smallmatrix}0&0\\0&1\end{smallmatrix}\big) \big]$. Considerem l'aplicació lineal $f\colon E \to E'$ definida per \textbf{[Acabar-ho!!!!]}
+\end{exemple}
+
+\subsection{Definició d'espai vectorial abstracte}
+Tot i que definirem el concepte d'espai vectorial en general, podeu pensar en tot moment en $\K^n$ i les operacions que ja coneixeu entre vectors.
+\begin{definicio}
+	Un \emph{$\K$-espai vectorial $E$}\index{espai vectorial} és un conjunt juntament amb dues operacions:
+	\begin{itemize}
+		\item Suma de vectors:
+		$$
+		\begin{array}{cccc}
+		+ \colon & E \times E & \longrightarrow & E \\
+		&(\vec u,\vec v) & \mapsto & \vec u+\vec v
+		\end{array}
+		$$
+		\item Multiplicació per escalar:
+		$$
+		\begin{array}{cccc}
+		\cdot \colon & \K \times E & \longrightarrow & E \\
+		&(\lambda,\vec v) & \mapsto & \lambda \vec v
+		\end{array}
+		$$
+	\end{itemize}
+	complint les condicions següents:
+	\begin{itemize}
+		\item La suma és 
+		\begin{itemize}
+			\item commutativa: $\vec u+\vec v=\vec v+\vec u$ $\forall \vec u,\vec v \in E$, 
+			\item associativa $(\vec u+\vec v)+\vec w=\vec u+(\vec v+\vec w)$, $\forall \vec u,\vec v,\vec w \in E$,
+			\item té un element neutre $\vec 0$: $\vec 0+\vec v=\vec v$ $\forall v \in E$ i
+			\item tot vector té un vector simètric: $\forall \vec v\in E$, $\exists \vec w$ tal que $\vec u + \vec w=\vec 0$ (escrivim $-\vec v$).
+		\end{itemize}
+		\item El producte per escalar compleix:
+		\begin{itemize}
+			\item Per a tot $\vec v \in E$, $1 \cdot \vec v=\vec v$,
+			\item $\forall \lambda, \mu \in \K$ i $\forall \vec v \in E$ $(\lambda \mu)\vec v=\lambda(\mu \vec v)$,
+			\item $\forall \lambda, \mu \in \K$ i $\forall \vec v \in E$ $(\lambda + \mu)\vec v=\lambda \vec v + \mu \vec v$ i
+			\item $\forall \lambda \in \K$ i $\forall \vec u, \vec v \in E$ $\lambda(\vec u +\vec v)=\lambda\vec u + \lambda \vec v$.
+		\end{itemize}
+	\end{itemize}
+\end{definicio}
+\begin{observacio}
+	D'aquestes propietats es dedueix que $0\vec v=\vec 0$ per a tot $\vec v \in E$: considerem les igualtats:
+	$$
+	\vec v = 1\vec v = (1+0)\vec v=1\vec v+0\vec v=\vec v+0\vec v
+	$$
+	i ara sumem a les dues bandes $-\vec v$, obtenint $\vec 0 = 0\vec v$.
+\end{observacio}
+\begin{exercici}
+	Demostreu que:
+	\begin{itemize}
+		\item $\lambda \vec 0=\vec 0$ per a tot $\lambda\in\K$ i
+		\item $\lambda \vec u=\vec 0$ si i només si $\lambda=0$ o bé $\vec u=\vec 0$.
+	\end{itemize}
+\end{exercici}
+\begin{exemple}
+	La suma i multiplicació per escalar de les matrius que hem vist a la Subsecció \ref{subsec:opmat} ens dona estructura d'espai vectorial a $M_{m\times n}(\K)$. En particular, si identifiquem $\K^m$ amb $M_{m\times 1}(\K)$, tenim que $\K^m$ és un $\K$-espai vectorial. Casos particulars d'aquests són:
+	\begin{itemize}
+		\item $\R^m$ és un $\R$-espai vectorial.
+		\item $\Q^m$ és un $\Q$-espai vectorial.
+	\end{itemize}
+\end{exemple}
+\begin{exemple}
+	Considerem $\K[x]$ els polinomis en una variable. Els vectors d'aquest espai vectorial són:
+	$$
+	\K[x]:=\{ \lambda_0 + \lambda_1 x + \lambda_2 x^2+ \cdots \lambda_n x^n  \mid \lambda_i \in \K \} \,.
+	$$
+	La suma és la suma de polinomis (on agrupem els termes pel grau), el producte per escalars és multiplicar pel corresponent escalar tots els coeficients i el vector zero es correspon amb el polinomi $0$.
+\end{exemple}
+\begin{exemple}
+	$\R$ és un $\Q$ espai vectorial. La suma de vectors és la suma de números reals, així com la multiplicació per un escalar (que demanem que sigui de $\Q$). El vector zero és el número $0$. Observem que la idea de independència lineal (Definició \ref{def:dependlineal}) pot semblar una mica estranya. Per exemple, els vectors $\{1,\sqrt{2}\}$ són linealment independents: si fossin linealment dependents, un es podria posar com a combinació lineal de l'altre: si $\sqrt{2}=\lambda 1$ amb $\lambda\in\Q$, voldria dir que $\sqrt{2}$ és racional (i no ho és). Si $1=\lambda \sqrt{2}$, $\lambda$ no pot ser zero, i llavors $\sqrt{2}=1/\lambda$, amb $\lambda$ racional, pel que tenim la mateixa contradicció.
+\end{exemple}

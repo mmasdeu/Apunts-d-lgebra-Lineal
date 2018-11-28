@@ -1,0 +1,67 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = ca_ES-valencia
+% !TeX root = MatCADAlgLin.tex
+
+\appendix
+\section{Nombres complexos}
+Podem definir els nombres complexos com
+\[
+\C =\{a+bi ~|~ a,b\in\R\}.
+\]
+Com a espai vectorial sobre $\R$, podem identificar $\C$ amb $\R^2$, i per tant tenim definida una suma i una producte per reals:
+\[
+(a+bi) + (c+di) = (a+c) + (b+d)i, \quad \lambda(a+bi)=\lambda a + \lambda b i.
+\]
+Tenim però una operació addicional, el producte de nombres complexos:
+\[
+(a+bi)(c+di) = (ac-bd) + (ad+bc)i,
+\]
+on la fórmula es recorda fàcilment si tenim en compte que $i^2=-1$, i fent servir la propietat distributiva.
+
+Definim la \emph{part real} i la \emph{part imaginària} \index{part real}\index{part imaginària} d'un nombre complex com:
+\[
+\Re(a+bi) = a,\quad \Im(a+bi) = b.
+\]
+També el \emph{conjugat}\index{conjugat} d'un nombre complex es defineix com:
+\[
+\overline{(a+bi)} = a-bi,
+\]
+i per tant tenim les fórmules
+\[
+\Re(z) = \frac{z+\bar z}{2},\quad \Im(z)=\frac{z-\bar z}{2i},\quad \forall z\in\C.
+\]
+La \emph{norma}\index{norma} d'un element $z=a+bi$ és
+\[
+N(z) = z\bar z = (a+bi)(a-bi) = a^2+b^2\geq 0.
+\]
+Observem que $z\bar z \geq 0$, i que $z\bar z = 0$ si i només si $z=0$. Això ens permet calcular fàcilment una fórmula per l'invers d'$a+bi$:
+\[
+(a+bi)^{-1} = \frac{1}{a+bi} = \frac{a-bi}{(a+bi)(a-bi)} = \frac{a}{a^2+b^2}+\frac{-b}{a^2+b^2}i.
+\]
+Pensat com un element de $\R^2$, $N(z)=|z|^2$, on $|z|=\sqrt{a^2+b^2}$ és el mòdul de $z$ pensat com un element de $\R^2$. Les coordenades polars del punt $(a,b)\in\R^2$ es calculen fent servir que:
+\[
+a = r\cos(\theta),\quad b = r\sin(\theta),
+\]
+i per tant:
+\[
+r = \sqrt{z\bar z}=\sqrt{a^2+b^2},\quad \theta = \arg(z) = \arctan(b/a) (+\pi),
+\]
+on haurem de sumar $\pi$ a $\arctan(b/a)\in[-\pi/2,\pi/2]$ si el punt $(a,b)$ pertany al II o III quadrant.
+
+Podem escriure (aquí ho podem pensar com una notació, encara que té una justificació algebraica) que
+\[
+a+bi = re^{i\theta},
+\]
+i així podem recordar les fórmules
+\[
+|zw|=|z||w|,\quad \arg(zw)=\arg(z)+\arg(w)\pmod{2\pi}.
+\]
+El següent resultat és el motiu pel què ens interessa treballar a $\C$:
+
+\begin{teorema}[Teorema fonamental de l'àlgebra]
+Tot polinomi $f(x)\in \C[x]$ de grau $n\geq 0$ es pot escriure com
+\[
+f(x) = c (x-\lambda_1)\cdots (x-\lambda_n),
+\]
+on $c$ i $\lambda_1,\ldots,\lambda_n$ són nombres complexos (possiblement repetits).
+\end{teorema}
