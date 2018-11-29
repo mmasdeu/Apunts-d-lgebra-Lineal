@@ -18,4 +18,9 @@ deploy:
   file:
   - _build/MatCADAlgLinBook.pdf
   - _build/MatCADAlgLin.pdf
+  on:
+    repo: releases
+    branches:
+      only:
+        - master
   skip_cleanup: true
