@@ -19,7 +19,6 @@ deploy:
   - _build/MatCADAlgLinBook.pdf
   - _build/MatCADAlgLin.pdf
   on:
-    repo: releases
     branches:
       only:
         - master
