@@ -8,6 +8,7 @@ book:
 
 article:
 	pdflatex MatCADAlgLin
+	makeindex MatCADAlgLin.idx
 	pdflatex MatCADAlgLin
 
 clean:
