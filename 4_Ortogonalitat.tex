@@ -6,9 +6,9 @@
 Podeu trobar el contingut de la part d'ortogonalitat a \cite[Tema 5]{Bret}, i de la part de formes quadràtiques a (\cite[Tema~8]{Bret},\cite[Tema~4]{NaXa}).
 \subsection{Ortogonalitat a \texorpdfstring{$\R^n$}{Rn}}
 Considerem l'espai vectorial $\R^n$ i recordem el producte escalar definit com: si $\vec u=\smat{u_1\\u_2\\ \vdots\\u_n}$ i $\vec v=\smat{v_1\\v_2\\ \vdots \\ v_n}$ són vectors d'$\R^n$, llavors:
-$$
+\[
 \vec u \cdot \vec v = \vec u^T \vec v=\sum_{i=1}^n u_iv_i \,.
-$$
+\]
 \begin{observacio}
 Observem que a les igualtats anteriors hi ha cert abús de notació: estem definint el producte escalar (que denotem amb ``$\cdot$''), que resulta amb un nombre real. El terme entre les dues igualtats representa una matriu $1\times 1$, que obtenim del producte de la matriu fila formada amb les entrades del vector $\vec u$ amb la matriu columna formada amb les entrades del vector $\vec v$. Per tant, estem identificant vectors amb matrius columna, i escalars amb matrius $1\times 1$, i ho seguirem fent sense massa risc de confusió.
 \end{observacio}
@@ -17,11 +17,10 @@ Observem que a les igualtats anteriors hi ha cert abús de notació: estem defin
     \item Diem que dos vectors $\vec u$ i $\vec v$ són \emph{ortogonals} si $\vec u\cdot\vec v=0$.
     \item Diem que els vectors $\vec u_1, \dots, \vec u_k$ de $\R^n$ \emph{són ortogonals}\index{ortogonals} si són ortogonals dos a dos, o sigui, si $\vec u_i\cdot\vec u_j=0$ per a tot $i\neq j$.
     \item Definim la \emph{longitud d'un vector}:
-    $$
+    \[
     \|\vec u\|=\sqrt{\vec u\cdot \vec u}=\sqrt{\sum_{i=1}^n u_i^2}.
-    $$
+    \]
     \item Diem que un vector $\vec u\in\R^n$ és \emph{unitari} si $\|\vec u\|=1$.
-
     \item Diem que els vectors $\vec u_1, \dots, \vec u_k$ de $\R^n$ \emph{són ortonormals}\index{ortonormals} si són unitaris i ortogonals dos a dos, o sigui, si 
     $$\vec u_i\cdot\vec u_j=\left\{ \begin{array}{ll} 1 & \text{si $i=j$} \\ 0 & \text{si $i\neq j$}\end{array}\right.$$
 \end{itemize}
@@ -41,7 +40,7 @@ Suposem que tenim una combinació lineal dels vectors $\vec u_1, \dots, \vec u_k
 $$
 0 = \lambda_1 \vec u_1 + \dots + \lambda_n\vec u_n \,.
 $$
-Llavors, fent el producte escalar per $\vec u_i$ tenim:
+Si veiem que tots els $\lambda_i$ són zero ja estarem. Triem una $i$ i fent el producte escalar per $\vec u_i$ tenim:
 \begin{align*}
     0 &  = (\lambda_1 \vec u_1 + \dots + \lambda_n\vec u_n)\cdot \vec u_i= \\
      & = \lambda_1 (\vec u_1 \cdot \vec u_i) + \dots + \lambda_n(\vec u_n\cdot \vec u_i)=\\
