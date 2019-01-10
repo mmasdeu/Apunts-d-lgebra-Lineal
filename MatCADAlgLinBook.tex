@@ -2,7 +2,7 @@
 %!TeX encoding = UTF-8
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The Legrand Orange Book
+% The Legrand Orange Book<
 % LaTeX Template
 % Version 2.4 (26/09/2018)
 %
@@ -49,7 +49,8 @@
 
 \input{structure.tex} % Insert the commands.tex file which contains the majority of the structure behind the template
 
-\hypersetup{pdftitle={Apunts d'Àlgebra Lineal},pdfauthor={Marc Masdeu, Albert Ruiz}} % Uncomment and fill out to include PDF metadata for the author and title of the book
+\usepackage{hyperref}
+\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor=ocre,bookmarks=true,bookmarksopen=false, pdftitle={Apunts d'Àlgebra Lineal},pdfauthor={Marc Masdeu, Albert Ruiz}}
 
 %----------------------------------------------------------------------------------------
 
@@ -58,7 +59,7 @@
 \usepackage{mathtools}
 \usepackage[all]{xy}
 
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault}
 
 \newcommand{\bbdef}[1]{\expandafter\newcommand% 
 	\csname#1\endcsname{\mathbb{#1}}}
@@ -90,6 +91,7 @@ material presentat. La numeració és la de~\cite{Bret}.
 
 \newcommand{\smat}[1]{\left(\begin{smallmatrix}#1\end{smallmatrix}\right)}
 
+\renewcommand{\setminus}{\smallsetminus}
 \DeclareMathOperator{\Rang}{Rang}
 \DeclareMathOperator{\rref}{rref}
 \DeclareMathOperator{\rcef}{rcef}
@@ -117,6 +119,9 @@ material presentat. La numeració és la de~\cite{Bret}.
 
 % \setcounter{tocdepth}{2}
 
+\usepackage{imakeidx}
+\makeindex
+
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -128,8 +133,8 @@ material presentat. La numeració és la de~\cite{Bret}.
 \begin{tikzpicture}[remember picture,overlay]
 \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.pdf}};
 \draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Apunts d'Àlgebra Lineal\\[15pt] % Book title
-{\Large Grau Matemàtica Computacional i Analítica de Dades}\\[20pt] % Subtitle
-{\huge Marc Masdeu, Albert Ruiz}}}; % Author name
+%{\Large Grau Matemàtica Computacional i Analítica de Dades}\\[20pt] % Subtitle
+{\Large Marc Masdeu, Albert Ruiz}}}; % Author name
 \end{tikzpicture}
 \vfill
 \endgroup
@@ -156,9 +161,7 @@ material presentat. La numeració és la de~\cite{Bret}.
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
-
-% \chapterimage{chapter_head_1.pdf} % Table of contents heading image
+\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with 
 
 \pagestyle{empty} % Disable headers and footers for the following pages
 
@@ -168,47 +171,57 @@ material presentat. La numeració és la de~\cite{Bret}.
 
 \pagestyle{fancy} % Enable headers and footers again
 
-
 %----------------------------------------------------------------------------------------
 %	CHAPTERS
 % ----------------------------------------------------------------------------------------
+
+
+\usechapterimagetrue
+\chapterimage{Cap0.png} % Table of contents heading image
 \chapter{Introducció}
 {
 \let\subsection\subsubsection
 \let\subsubsection\paragraph
 \input{0_Intro.tex}
 }
+\chapterimage{Cap1.png}
 \chapter{Matrius i equacions lineals}
 {
 \let\subsection\subsubsection
 \let\subsubsection\paragraph
 \input{1_Matrius_eq_lin.tex}
 }
+\chapterimage{Cap2.png}
 \chapter{Espais vectorials i aplicacions lineals}
 {
 \let\subsection\subsubsection
 \let\subsubsection\paragraph
 \input{2_Esp_vec_apl_lin.tex}
 }
+\chapterimage{Cap3.png}
 \chapter{Diagonalització}
 {
 \let\subsection\subsubsection
 \let\subsubsection\paragraph
 \input{3_Diagonalitzacio.tex}
 }
+\chapterimage{Cap4.png}
 \chapter{Ortogonalitat}
 {
 \let\subsection\subsubsection
 \let\subsubsection\paragraph
 \input{4_Ortogonalitat.tex}
 }
-\appendix
-\chapter{Nombres complexos}
-{
-\let\subsection\subsubsection
-\let\subsubsection\paragraph
-\input{99_Apendix.tex}
-}
+
+\chapterimage{Cap0.png}
+
+%\appendix
+%\chapter{Nombres complexos}
+%{
+%\let\subsection\subsubsection
+%\let\subsubsection\paragraph
+%\input{99_Apendix.tex}
+%}
 
 
 

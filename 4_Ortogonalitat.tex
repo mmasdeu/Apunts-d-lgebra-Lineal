@@ -488,28 +488,28 @@ Volem calcular la matriu de la projecció ortogonal de $\R^4$ a $V=\langle \smat
 \end{exemple}
 
 \subsection{Mínims quadrats}
-En aquesta secció suposarem que tenim un conjunt $E$ i un subconjunt $V\subset E$ i que, a cada element d'$E$, volem assignar-li l'element de $V$ que millor l'aproxima. Per això, suposem que $E$ és un $\R$-espai vectorial i que $V$ és un subespai. Llavors:
+En aquesta secció suposarem que tenim un subespai $V\subset\R^n$ fixat. A cada element d'$\R^n$, volem assignar-li un element de $V$ que ``millor l'aproxima'', en el sentit que la norma de l'error que produïm és mínima.
 \begin{proposicio}\label{prop:proj_com_aprox}
-Si $E$ és un $\R$-espai vectorial i $V \subset E$ és un subespai, llavors, per a tot $\vec u \in E$ i $\vec v\in V$ es compleix:
+Si $V \subset \R^n$ és un subespai, llavors, per a tot $\vec w \in \R^n$ i $\vec v\in V$ es compleix:
 \[
-\|\vec u - \proj_V(\vec u)\| \leq \|\vec u - \vec v\|.
+\|\vec w - \vec v\| \geq \|\vec w - \proj_V(\vec w)\|.
 \]
 \end{proposicio}
 \begin{proof}
-Tenim que $\vec u - \vec v = (\vec u - \proj_V(u)) + (\proj_V(u) - \vec v)$ amb el primer vector de $\vec V^\perp$ i el segon de $V$. Aplicant el Teorema de Pitàgores tenim:
+Tenim que $\vec w - \vec v = (\vec w - \proj_V(w)) + (\proj_V(w) - \vec v)$ amb el primer vector de $\vec V^\perp$ i el segon de $V$. Aplicant el Teorema de Pitàgores tenim:
 \[
-\|\vec u - \vec v\|^2= \|\vec u - \proj_V(\vec u)\|^2 + \|\proj_V(\vec u) - \vec v\|^2 \geq \|\vec u - \proj_V(\vec u)\|^2 ,
+\|\vec w - \vec v\|^2= \|\vec w - \proj_V(\vec w)\|^2 + \|\proj_V(\vec w) - \vec v\|^2 \geq \|\vec w - \proj_V(\vec w)\|^2 ,
 \]
 i tenim la desigualtat que volem.
 \end{proof}
-Per tant la millor aproximació d'un vector $\vec u$ és la projecció ortogonal de $\vec u$, si entenem per ``millor'' aquell vector de $V$ que està a menor distància del vector $\vec u$.
+Per tant la millor aproximació d'un vector $\vec w$ és la projecció ortogonal de $\vec w$, si entenem per ``millor'' aquell vector de $V$ que està a menor distància del vector $\vec w$.
 
 \subsubsection{Recta de regressió}\index{recta de regressió}
 Suposem que tenim un núvol de punts  $(x_1,y_1), \dots , (x_k,y_k)$ de $\R^2$ que, en principi, no estan alineats. Suposem, a més, que hi ha una dependència del tipus $y=f(x)$ (per tant, al núvol de punts seria un problema que hi hagués dos punts amb la mateixa $x$ i diferents $y$). Suposem que els punts estan \emph{aproximadament} alineats i que el que volem trobar és la recta $y=a_0+a_1x$ que aproxima millor aquests punts. 
 
 Una altra manera de pensar-ho és que volem resoldre el sistema d'equacions amb incògnites $a_0$ i $a_1$:
 \begin{align*}
-a_ 0 + x_1 a_1 & = y_1 \\ & \vdots  \\ a_0 + x_k a_k & = y_k 
+a_ 0 + x_1 a_1 & = y_1 \\ & \vdots  \\ a_0 + x_k a_1 & = y_k 
 \end{align*}
 O, en forma matricial:
 \[
@@ -990,7 +990,7 @@ Veurem que sí:
 $f=f_A\colon \R^n \to \R^m$ és una aplicació lineal, llavors existeix una base ortonormal $\calb=[\vec v_1, \dots, \vec v_n]$ d'$\R^n$ tal que $f(\vec v_1), \dots, f(\vec v_n)$ tal que són ortogonals.
 \end{teorema}
 \begin{proof}
-Considerem $f=f_A$, i per tant $A\in M_{m\times n}(\R)$ la matriu tal que $f(\vec v)=A\vec v$. Llavors, la matriu $A^TA\in M_n(\R)$ és simètrica, i per tant diagonalitza en una base ortonormal, per tant, existeix una base ortonormal $\calb[\vec v_1, \dots, \vec v_n]$ de $\R^n$ i escalars $\lambda_1, \dots, \lambda_n\in \R$ tals que
+Considerem $f=f_A$, i per tant $A\in M_{m\times n}(\R)$ la matriu tal que $f(\vec v)=A\vec v$. Llavors, la matriu $A^TA\in M_n(\R)$ és simètrica, i per tant diagonalitza en una base ortonormal, per tant, existeix una base ortonormal $\calb=[\vec v_1, \dots, \vec v_n]$ de $\R^n$ i escalars $\lambda_1, \dots, \lambda_n\in \R$ tals que
 \[
 A^T A \vec v_i=\lambda_i \vec v_i \text{ per a tot $i=1, \dots, n$.}
 \]

@@ -69,9 +69,9 @@
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY AND INDEX
 %----------------------------------------------------------------------------------------
-
-\usepackage[style=numeric,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
-\addbibresource{bibliography.bib} % BibTeX bibliography file
+\usepackage{csquotes}
+\usepackage[style=numeric,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,autolang=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+%\addbibresource{bibliography.bib} % BibTeX bibliography file
 \defbibheading{bibempty}{}
 
 \usepackage{calc} % For simpler calculation - used for spacing the index letter headings correctly
@@ -173,9 +173,12 @@
 \renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}} % Styling for the current chapter in the header
 \renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection\hspace{5pt}#1}{}} % Styling for the current section in the header
 
+
 \fancyhf{} % Clear default headers and footers
 \fancyhead[LE,RO]{\sffamily\normalsize\thepage} % Styling for the page number in the header
-\fancyhead[LO]{\rightmark} % Print the nearest section name on the left side of odd pages
+%\fancyhead[LO]{\rightmark} % Print the nearest section name on the left side of odd pages
+\fancyhead[LO]{\sffamily\normalsize M. Masdeu, A. Ruiz}
+\fancyhead[CO]{\sffamily\normalsize\bfseries{Apunts d'Àlgebra Lineal}} 
 \fancyhead[RE]{\leftmark} % Print the current chapter name on the right side of even pages
 %\fancyfoot[C]{\thepage} % Uncomment to include a footer
 
@@ -267,6 +270,7 @@
 \theoremstyle{blacknumbox}
 \newtheorem{vocabulari}{Vocabulari}[chapter]
 \newtheorem{definitionT}{Definició}[chapter]
+\newtheorem{remarkT}{Observació}[chapter]
 \newtheorem{corollaryT}[dummy]{Corol·lari}
 \theoremstyle{ocrenum}
 \newtheorem{lema}[dummy]{Lema}
@@ -339,6 +343,24 @@ rightmargin=0cm,
 linewidth=4pt,
 innerbottommargin=5pt]{cBox}
 
+% Remark box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=ocre,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=2pt,
+innerbottommargin=0pt]{rBox}	
+
+
+
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{teorema}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
 \newenvironment{proposicio}{\begin{tBox}\begin{propositionT}}{\end{propositionT}\end{tBox}}
@@ -347,18 +369,18 @@ innerbottommargin=5pt]{cBox}
 \newenvironment{definicio}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
 \newenvironment{exemple}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
 \newenvironment{corollari}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}	
-
+\newenvironment{observacio}{\begin{rBox}\begin{remarkT}}{\end{remarkT}\end{rBox}}
 %----------------------------------------------------------------------------------------
 %	REMARK ENVIRONMENT
 %----------------------------------------------------------------------------------------
 
-\newenvironment{observacio}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
-\begin{list}{}{
-\leftmargin=35pt % Indentation on the left
-\rightmargin=25pt}\item\ignorespaces % Indentation on the right
-\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
-\node[draw=ocre!60,line width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{ocre}{R}};\end{tikzpicture}} % Orange R in a circle
-\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
+%\newenvironment{observacio}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
+%\begin{list}{}{
+%\leftmargin=35pt % Indentation on the left
+%\rightmargin=25pt}\item\ignorespaces % Indentation on the right
+%\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
+%\node[draw=ocre!60,line width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{ocre}{R}};\end{tikzpicture}} % Orange R in a circle
+%\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
 
 %----------------------------------------------------------------------------------------
 %	SECTION NUMBERING IN THE MARGIN
@@ -469,7 +491,7 @@ innerbottommargin=5pt]{cBox}
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth]{\thechapterimage}\fi};
+\node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth,height=8cm]{\thechapterimage}\fi};
 \draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
 \draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}\thechapter\autodot~#1\strut};
 \end{tikzpicture}};
@@ -478,7 +500,7 @@ innerbottommargin=5pt]{cBox}
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth]{\thechapterimage}\fi};
+\node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth,height=8cm]{\thechapterimage}\fi};
 \draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
 \draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
 \end{tikzpicture}};
@@ -491,7 +513,7 @@ innerbottommargin=5pt]{cBox}
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth]{\thechapterimage}\fi};
+\node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth,height=8cm]{\thechapterimage}\fi};
 \draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
 \draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
 \end{tikzpicture}};
@@ -503,8 +525,6 @@ innerbottommargin=5pt]{cBox}
 %	LINKS
 %----------------------------------------------------------------------------------------
 
-\usepackage{hyperref}
-\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor=ocre,bookmarks=true,bookmarksopen=false}
 
 \usepackage{bookmark}
 \bookmarksetup{
